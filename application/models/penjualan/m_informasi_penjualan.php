@@ -6,8 +6,8 @@ class m_informasi_penjualan extends CI_Model {
     //select->read
 	public function getData($value='')
 	{
-		$this->db->from('informasi_penjualan mb');
-		$this->db->order_by('mb.id', 'desc');
+		$this->db->from('informasi_penjualan ma');
+		$this->db->order_by('ma.id', 'desc');
 		return $this->db->get();
     }
     

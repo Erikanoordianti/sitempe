@@ -22,7 +22,7 @@
               <thead>
                 <th>No</th>
                 <th>Id Penjualan</th>
-                <th>Tanggal_Pembelian</th>
+                <th>Tanggal Pembelian</th>
                 <th>No Nota</th>
                 <th>Nama Konsumen</th>
                 <th>Kualitas</th>
@@ -63,14 +63,19 @@
 
             </td>
           </tr>
-
-        <?php endforeach;?>
-                </tbody>
-            </table>
-          </div>
+          <?php endforeach;?>
+        </tbody>
+        </table>
+        <a href="" class="btn btn-warning" style="margin-bottom;
+        10px; "title="view/utily/v_dashboard.php"></i>Back</a>
+           <a href ="application/page/informasi_penjualan/cetak.php" class="btn btn-primary" style="margin-bottom;
+        10px; "title=""><i class="fa fa-print"></i>Cetak</a>
         </div>
+       </div>
       </div>
-    </div>
+      </div>
+      </div>
+      </div>
 <script type="text/javascript">
   $(document).ready(function() {
     var table = $('#tableku').DataTable( {

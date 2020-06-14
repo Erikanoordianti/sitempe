@@ -19,7 +19,7 @@
         <div class="form-group">
             <label class="col-sm-4 control-label">Tanggal Pembelian</label>
             <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'tanggal_pembelian','value'=>$row->tanggal_pembelian,'class'=>'form-control'));?>
+            <?php echo form_input(array('name'=>'tanggal_pembelian','type'=>'date','value'=>$row->tanggal_pembelian,'class'=>'form-control'));?>
             <?php echo form_error('tanggal_pembelian');?>
             <span id="check_data"></span>
             </div>
@@ -45,13 +45,15 @@
 
         <div class="form-group">
             <label class="col-sm-4 control-label">Kualitas</label>
-            <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'kualitas','value'=>$row->kualitas,'class'=>'form-control'));?>
-            <?php echo form_error('kualitas');?>
-            <span id="check_data"></span>
+          <div class="col-sm-8">
+          <select name ='kualitas'>
+          <option value ='Baik'>Baik</option>
+          <option value ='Buruk'>Buruk</option>
+          </select>
+          <span id="check_data"></span>
             </div>
         </div>
-
+&emsp;
         <div class="form-group">
             <label class="col-sm-4 control-label">Ukuran</label>
             <div class="col-sm-8">
@@ -59,8 +61,8 @@
             <?php echo form_error('ukuran');?>
             <span id="check_data"></span>
             </div>
-        </div>
-
+         </div>
+         &emsp;
         <div class="form-group">
             <label class="col-sm-4 control-label">Harga</label>
             <div class="col-sm-8">
@@ -68,8 +70,8 @@
             <?php echo form_error('harga');?>
             <span id="check_data"></span>
             </div>
-        </div>
-
+            </div>
+            &emsp;
         <div class="form-group">
             <label class="col-sm-4 control-label">Jumlah Beli</label>
             <div class="col-sm-8">
@@ -78,7 +80,7 @@
             <span id="check_data"></span>
             </div>
         </div>
-
+        &emsp;
         <div class="form-group">
             <label class="col-sm-4 control-label">Total Bayar</label>
             <div class="col-sm-8">
@@ -87,15 +89,16 @@
             <span id="check_data"></span>
             </div>
         </div>
-
+        &emsp;
         <div class="form-group">
             <label class="col-sm-4 control-label">Status</label>
-            <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'status','value'=>$row->status,'class'=>'form-control'));?>
-            <?php echo form_error('status');?>
-            <span id="check_data"></span>
-            </div>
+          <div class="col-sm-8">
+          <select name ='status'>
+          <option value ='Sudah Dibayar'>Sudah Dibayar</option>
+          <option value ='Belum Dibayar'>Belum Dibayar</option>
+          </select>
         </div>
+    </div>
         <div class="form-group">
             <label class="col-sm-4 control-label">Save</label>
             <div class="col-sm-8 tutup">

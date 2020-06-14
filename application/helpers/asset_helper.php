@@ -40,6 +40,6 @@ function favicon($file)
 {
     return '
         <link rel="shortcut icon" href="'.base_url($file).'" type="image/x-icon">
-        <link rel="icon" href="favicon.ico'.base_url($file).'" type="image/x-icon">
+        <link rel="icon" href="'.base_url($file).'" type="image/x-icon">
     ';
 }

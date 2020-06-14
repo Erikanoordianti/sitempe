@@ -36,8 +36,8 @@ class informasi_penjualan extends CI_Controller {
 		$this->load->library('form_validation');
 		$config = array(
 				array(
-					'field'	=> 'tanggal_pembelian',
-					'label' => 'tanggal_pembelian',
+					'field'	=> 'id_penjualan',
+					'label' => 'id_penjualan',
 					'rules' => 'required'
 				)
 			);
@@ -64,13 +64,13 @@ class informasi_penjualan extends CI_Controller {
 		$this->load->library('form_validation');
 		$config = array(
 				array(
-					'field'	=> 'id_penjualan',
+					'field'	=> 'id',
 					'label' => '',
 					'rules' => ''
 				),
 				array(
-					'field'	=> 'tanggal_pembelian',
-					'label' => 'tanggal_pembelian',
+					'field'	=> 'id_penjualan',
+					'label' => 'id_penjualan',
 					'rules' => 'required'
 				)
 			);
@@ -85,10 +85,10 @@ class informasi_penjualan extends CI_Controller {
 		}
 		else
 		{
-			$datapost = get_post_data(array('id_penjualan','tanggal_pembelian','no_nota','nama_konsumen','kualitas','ukuran','harga','jumlah_beli','total_bayar','status'));
-			$this->m_pengajuan_alat->updateData($datapost);
+			$datapost = get_post_data(array('id','id_penjualan','tanggal_pembelian','no_nota','nama_konsumen','kualitas','ukuran','harga','jumlah_beli','total_bayar','status'));
+			$this->m_informasi_penjualan->updateData($datapost);
 			$this->fungsi->run_js('load_silent("penjualan/informasi_penjualan","#content")');
-			$this->fungsi->message_box("Data Pengajuan Alat sukses diperbarui...","success");
+			$this->fungsi->message_box("Informasi Penjualan sukses diperbarui...","success");
 			$this->fungsi->catat($datapost,"Mengedit informasi_penjualan dengan data sbb:",true);
 		}
 	}
