@@ -19,7 +19,7 @@
             <?php echo form_input(array('name'=>'id','class'=>'form-control'));?>
             <?php echo form_error('id');?>
             <span id="check_data"></span>
-            </div> 
+            </div>
         </div>
 
         <div class="form-group">
