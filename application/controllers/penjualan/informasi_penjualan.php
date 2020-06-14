@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class pengajuan_alat extends CI_Controller {
+class informasi_penjualan extends CI_Controller {
 	
 	public function __construct()
 	{
@@ -20,7 +20,7 @@ class pengajuan_alat extends CI_Controller {
 	{
 		$content   = "<div id='divsubcontent'></div>";
 		$header    = "Form Informasi Penjualan";
-		$subheader = "pengajuan_alat";
+		$subheader = "informasi_penjualan";
 		$buttons[] = button('jQuery.facebox.close()','Tutup','btn btn-default','data-dismiss="modal"');
 		echo $this->fungsi->parse_modal($header,$subheader,$content,$buttons,"");
 		if($param=='base'){
@@ -36,8 +36,8 @@ class pengajuan_alat extends CI_Controller {
 		$this->load->library('form_validation');
 		$config = array(
 				array(
-					'field'	=> 'informasi_penjualan',
-					'label' => 'informasi_penjualan',
+					'field'	=> 'tanggal_pembelian',
+					'label' => 'tanggal_pembelian',
 					'rules' => 'required'
 				)
 			);
@@ -52,7 +52,7 @@ class pengajuan_alat extends CI_Controller {
 		else
 		{
 			$datapost = get_post_data(array('id_penjualan','tanggal_pembelian','no_nota','nama_konsumen','kualitas','ukuran','harga','jumlah_beli','total_bayar','status'));
-			$this->m_pengajuan_alat->insertData($datapost);
+			$this->m_informasi_penjualan->insertData($datapost);
 			$this->fungsi->run_js('load_silent("penjualan/informasi_penjualan","#content")');
 			$this->fungsi->message_box("Data Informasi Penjualan sukses disimpan...","success");
 			$this->fungsi->catat($datapost,"Menambah informasi_penjualan dengan data sbb:",true);
@@ -64,13 +64,13 @@ class pengajuan_alat extends CI_Controller {
 		$this->load->library('form_validation');
 		$config = array(
 				array(
-					'field'	=> 'id',
-					'label' => 'bebas',
+					'field'	=> 'id_penjualan',
+					'label' => '',
 					'rules' => ''
 				),
 				array(
-					'field'	=> 'informasi_penjualan',
-					'label' => 'informasi_penjualan',
+					'field'	=> 'tanggal_pembelian',
+					'label' => 'tanggal_pembelian',
 					'rules' => 'required'
 				)
 			);
@@ -79,7 +79,7 @@ class pengajuan_alat extends CI_Controller {
 
 		if ($this->form_validation->run() == FALSE)
 		{
-			$data['edit'] = $this->db->get_where('pengajuan_alat',array('id'=>$id));
+			$data['edit'] = $this->db->get_where('informasi_penjualan',array('id'=>$id));
 			$data['status']='';
 			$this->load->view('penjualan/informasi_penjualan/v_informasi_penjualan_edit',$data);
 		}

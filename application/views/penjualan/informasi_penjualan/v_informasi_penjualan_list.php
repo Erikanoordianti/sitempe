@@ -10,7 +10,7 @@
             <?php
               $sesi = from_session('level');
               if ($sesi == '1' || $sesi == '2' || $sesi == '3' || $sesi == '6') {
-                echo button('load_silent("pengajuan/pengajuan_alat/form/base","#modal")','Add New pengajuan alat','btn btn-success');
+                echo button('load_silent("penjualan/informasi_penjualan/form/base","#modal")','Add New informasi penjualan','btn btn-success');
               } else {
                 # code...
               }
@@ -36,7 +36,7 @@
               <tbody>
               <?php 
           $i = 1;
-          foreach($pengajuan_alat->result() as $row): ?>
+          foreach($informasi_penjualan->result() as $row): ?>
           <tr>
             <td align="center"><?=$i++?></td>
             <td align="center"><?=$row->id_penjualan?></td>
@@ -44,7 +44,6 @@
             <td align="center"><?=$row->no_nota?></td>
             <td align="center"><?=$row->nama_konsumen?></td>
             <td align="center"><?=$row->kualitas?></td>
-            <td align="center"><?=$row->satuan_grosir?></td>
             <td align="center"><?=$row->ukuran?></td>
             <td align="center"><?=$row->harga?></td>
             <td align="center"><?=$row->jumlah_beli?></td>

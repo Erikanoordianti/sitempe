@@ -5,91 +5,91 @@
         
         
         <div class="form-group">
-            <label class="col-sm-4 control-label">Informasi Penjualan</label>
+            <label class="col-sm-4 control-label">Id Penjualan</label>
             <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'Informasi_penjualan','class'=>'form-control'));?>
-            <?php echo form_error('Informasi_penjualan');?>
+            <?php echo form_input(array('name'=>'id_penjualan','class'=>'form-control'));?>
+            <?php echo form_error('id_penjualan');?>
             <span id="check_data"></span>
             </div> 
         </div>
 
         <div class="form-group">
-            <label class="col-sm-4 control-label">id</label>
+            <label class="col-sm-4 control-label">Tanggal Penjualan</label>
             <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'id','class'=>'form-control'));?>
-            <?php echo form_error('id');?>
+            <?php echo form_input(array('name'=>'tanggal_penjualan','class'=>'form-control'));?>
+            <?php echo form_error('tanggal_penjualan');?>
             <span id="check_data"></span>
             </div>
         </div>
 
         <div class="form-group">
-            <label class="col-sm-4 control-label">Alias</label>
+            <label class="col-sm-4 control-label">No Nota</label>
             <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'alias','class'=>'form-control'));?>
-            <?php echo form_error('alias');?>
+            <?php echo form_input(array('name'=>'no_nota','class'=>'form-control'));?>
+            <?php echo form_error('no_nota');?>
             <span id="check_data"></span>
             </div>
         </div>
 
         <div class="form-group">
-            <label class="col-sm-4 control-label">Nama</label>
+            <label class="col-sm-4 control-label">Nama Konsumen</label>
             <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'nama','class'=>'form-control'));?>
-            <?php echo form_error('nama');?>
+            <?php echo form_input(array('name'=>'nama_konsumen','class'=>'form-control'));?>
+            <?php echo form_error('nama_konsumen');?>
             <span id="check_data"></span>
             </div>
         </div>
 
         <div class="form-group">
-            <label class="col-sm-4 control-label">Deskripsi</label>
+            <label class="col-sm-4 control-label">Kualitas</label>
             <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'deskripsi','class'=>'form-control'));?>
-            <?php echo form_error('deskripsi');?>
+            <?php echo form_input(array('name'=>'kualitas','class'=>'form-control'));?>
+            <?php echo form_error('kualitas');?>
             <span id="check_data"></span>
             </div>
         </div>
 
         <div class="form-group">
-            <label class="col-sm-4 control-label">Allowed Level</label>
+            <label class="col-sm-4 control-label">Ukuran</label>
             <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'allowed_level','class'=>'form-control'));?>
-            <?php echo form_error('allowed_level');?>
+            <?php echo form_input(array('name'=>'ukuran','class'=>'form-control'));?>
+            <?php echo form_error('ukuran');?>
             <span id="check_data"></span>
             </div>
         </div>
 
         <div class="form-group">
-            <label class="col-sm-4 control-label">Url</label>
+            <label class="col-sm-4 control-label">Harga</label>
             <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'url','class'=>'form-control'));?>
-            <?php echo form_error('url');?>
+            <?php echo form_input(array('name'=>'harga','class'=>'form-control'));?>
+            <?php echo form_error('harga');?>
             <span id="check_data"></span>
             </div>
         </div>
 
         <div class="form-group">
-            <label class="col-sm-4 control-label">Aktif</label>
+            <label class="col-sm-4 control-label">Jumlah Beli</label>
             <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'aktif','class'=>'form-control'));?>
-            <?php echo form_error('aktif');?>
+            <?php echo form_input(array('name'=>'jumlah_beli','class'=>'form-control'));?>
+            <?php echo form_error('jumlah_beli');?>
             <span id="check_data"></span>
             </div>
         </div>
 
         <div class="form-group">
-            <label class="col-sm-4 control-label">Urutan</label>
+            <label class="col-sm-4 control-label">Total Bayar</label>
             <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'urutan','class'=>'form-control'));?>
-            <?php echo form_error('urutan');?>
+            <?php echo form_input(array('name'=>'total_bayar','class'=>'form-control'));?>
+            <?php echo form_error('total_bayar');?>
             <span id="check_data"></span>
             </div>
         </div>
 
         <div class="form-group">
-            <label class="col-sm-4 control-label">Grub</label>
+            <label class="col-sm-4 control-label">Status</label>
             <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'grub','class'=>'form-control'));?>
-            <?php echo form_error('grub');?>
+            <?php echo form_input(array('name'=>'status','class'=>'form-control'));?>
+            <?php echo form_error('status');?>
             <span id="check_data"></span>
             </div>
         </div>
