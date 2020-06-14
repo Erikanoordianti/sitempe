@@ -16,7 +16,7 @@
                 ?>
                 <?php echo $avatar; ?>
                     <h5 class="description-header">SELAMAT DATANG DI SITEMPE</h5>
-                    <span class="description-text"><?php echo button('load_silent("cms/user/show_editForm_user/'.from_session('id').'","#content")','Update Profil','btn bg-purple','data-toggle="tooltip" title="Update Profil"');?> 
+                    <span class="description-text"><?php echo button('load_silent("cms/user/show_editForm_user/'.from_session('id').'","#content")','Update Profil','btn bg-black','data-toggle="tooltip" title="Update Profil"');?> 
 						</span>
                   </div>
                   <!-- /.description-block -->
