@@ -1,7 +1,7 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 date_default_timezone_set('Asia/Bangkok');
-$config['base_url']            = "http://localhost/srs_kel6_SI_UNNES";
+$config['base_url']            = "http://localhost/sitempe";
 
 $config['index_page']          = '';
 
@@ -52,10 +52,10 @@ $config['compress_output']      = FALSE;
 $config['time_reference']       = 'local';
 $config['rewrite_short_tags']   = FALSE;
 $config['proxy_ips']            = '';
-$config['project']              = 'EDLABS';
-$config['nama_pendek']          = 'EDLABS';
-$config['sub_title']            = 'Sistem Laboratorium';
-$config['title']                = 'Sistem Laboratorium';
+$config['project']              = 'SITEMPE';
+$config['nama_pendek']          = 'SITEMPE';
+$config['sub_title']            = 'Sistem Perusahaan Tempe';
+$config['title']                = 'Sistem Perusahaan Tempe';
 $config['fonts_path']           = 'system/fonts/';
 
 /* End of file config.php */
