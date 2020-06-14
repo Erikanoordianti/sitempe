@@ -4,7 +4,7 @@
       <div class="col-lg-12">
         <div class="box box-primary">
           <div class="box-header with-border">
-            <h3 class="box-title">Pengajuan Alat</h3>
+            <h3 class="box-title">Informasi Penjualan</h3>
 
             <div class="box-tools pull-right">
             <?php
@@ -21,17 +21,15 @@
             <table width="100%" id="tableku" class="table table-striped">
               <thead>
                 <th>No</th>
-                <th>ID</th>
-                <th>No Induk</th>
-                <th>Nama Alat</th>
-                <th>Seri</th>
-                <th>Merk</th>
-                <th>Satuan Grosir</th>
-                <th>Jumlah Grosir</th>
-                <th>Harga Grosir</th>
-                <th>Estimasi Jumlah</th>
-                <th>Harga Dasar</th>
-                <th>Nama Lab</th>
+                <th>Id Penjualan</th>
+                <th>Tanggal_Pembelian</th>
+                <th>No Nota</th>
+                <th>Nama Konsumen</th>
+                <th>Kualitas</th>
+                <th>Ukuran</th>
+                <th>Harga</th>
+                <th>Jumlah Beli</th>
+                <th>Total Bayar</th>
                 <th>Status</th>
                 <th>Act</th>
               </thead>
@@ -41,29 +39,28 @@
           foreach($pengajuan_alat->result() as $row): ?>
           <tr>
             <td align="center"><?=$i++?></td>
-            <td align="center"><?=$row->pengajuan_alat?></td>
-            <td align="center"><?=$row->no_induk?></td>
-            <td align="center"><?=$row->nama_alat?></td>
-            <td align="center"><?=$row->seri?></td>
-            <td align="center"><?=$row->merk?></td>
+            <td align="center"><?=$row->id_penjualan?></td>
+            <td align="center"><?=$row->tanggal_pembelian?></td>
+            <td align="center"><?=$row->no_nota?></td>
+            <td align="center"><?=$row->nama_konsumen?></td>
+            <td align="center"><?=$row->kualitas?></td>
             <td align="center"><?=$row->satuan_grosir?></td>
-            <td align="center"><?=$row->jumlah_grosir?></td>
-            <td align="center"><?=$row->harga_grosir?></td>
-            <td align="center"><?=$row->estimasi_jumlah?></td>
-            <td align="center"><?=$row->harga_dasar?></td>
-            <td align="center"><?=$row->nama_lab?></td>
+            <td align="center"><?=$row->ukuran?></td>
+            <td align="center"><?=$row->harga?></td>
+            <td align="center"><?=$row->jumlah_beli?></td>
+            <td align="center"><?=$row->total_bayar?></td>
             <td align="center"><?=$row->status?></td>
             <td align="center">
             <?php
               $sesi = from_session('level');
               if ($sesi == '1' || $sesi == '2' || $sesi == '3' || $sesi == '6') {
-                echo button('load_silent("pengajuan/pengajuan_alat/form/sub/'.$row->id.'","#modal")','','btn btn-info fa fa-edit','data-toggle="tooltip" title="Edit"');
+                echo button('load_silent("penjualan/informasi_penjualan/form/sub/'.$row->id.'","#modal")','','btn btn-info fa fa-edit','data-toggle="tooltip" title="Edit"');
  
               } else {
                 # code...
               }
               ?>
-              <a href="<?= site_url('pengajuan/pengajuan_alat/delete/'.$row->id) ?>" class="btn btn-danger" onclick="return confirm('Anda yakin ingin menghapus pengajuan alat ?')"><i class="fa fa-trash"></i></a>
+              <a href="<?= site_url('penjualan/informasi_penjualan/delete/'.$row->id) ?>" class="btn btn-danger" onclick="return confirm('Anda yakin ingin menghapus informasi penjualan ?')"><i class="fa fa-trash"></i></a>
 
             </td>
           </tr>
