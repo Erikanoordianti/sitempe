@@ -33,6 +33,8 @@
                 <th>Nama Bahan Baku</th>
                 <th>Harga</th>
                 <th>Jumlah</th>
+                <th>Total Uang</th>
+                <th>Keterangan</th>
                 <th>Act</th>
               </thead>
               <tbody>
@@ -45,6 +47,8 @@
             <td align="center"><?=$row->nama_bahan_baku?></td>
             <td align="center"><?=$row->harga?></td> 
             <td align="center"><?=$row->jumlah?></td>
+            <td align="center"><?=$row->total_uang?></td>
+            <td align="center"><?=$row->keterangan?></td>
             <td align="center">
             <?php
               $sesi = from_session('level');

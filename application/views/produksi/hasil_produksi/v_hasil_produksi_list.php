@@ -54,13 +54,16 @@
             </td>
           </tr>
 
-        <?php endforeach;?>
-                </tbody>
-            </table>
-          </div>
-        </div>
+          <?php endforeach;?>
+        </tbody>
+        </table>
+        <a href="" class="btn btn-warning" style="margin-bottom;
+        10px; "title="view/utily/v_dashboard.php"></i>Back</a>  </div>
+       </div>
       </div>
-    </div>
+      </div>
+      </div>
+      </div>
 <script type="text/javascript">
   $(document).ready(function() {
     var table = $('#tableku').DataTable( {

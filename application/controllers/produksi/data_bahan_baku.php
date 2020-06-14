@@ -53,7 +53,7 @@ class data_bahan_baku extends CI_Controller {
 		}
 		else
 		{
-			$datapost = get_post_data(array('id','id_bahan_baku','nama_bahan_baku','harga','jumlah'));
+			$datapost = get_post_data(array('id','id_bahan_baku','nama_bahan_baku','harga','jumlah','total_uang','keterangan'));
 			$this->m_data_bahan_baku->insertData($datapost);
 			$this->fungsi->run_js('load_silent("produksi/data_bahan_baku","#content")');
 			$this->fungsi->message_box("Data Bahan Baku sukses disimpan...","success");
@@ -88,7 +88,7 @@ class data_bahan_baku extends CI_Controller {
 		}
 		else
 		{
-			$datapost = get_post_data(array('id','id_bahan_baku','nama_bahan_baku','harga','jumlah'));
+			$datapost = get_post_data(array('id','id_bahan_baku','nama_bahan_baku','harga','jumlah','total_uang','keterangan'));
             $this->m_data_bahan_baku->updateData($datapost);
 			$this->fungsi->run_js('load_silent("produksi/data_bahan_baku","#content")');
 			$this->fungsi->message_box("Data Bahan Baku sukses diperbarui...","success");

@@ -36,8 +36,8 @@ class hasil_produksi extends CI_Controller {
 		$this->load->library('form_validation');
 		$config = array(
 				array(
-					'field'	=> 'tanggal_produksi',
-					'label' => 'tanggal_produksi',
+					'field'	=> 'id_produksi',
+					'label' => 'id_produksi',
 					'rules' => 'required'
 				)
 			);
@@ -64,13 +64,13 @@ class hasil_produksi extends CI_Controller {
 		$this->load->library('form_validation');
 		$config = array(
 				array(
-					'field'	=> 'id_produksi',
+					'field'	=> 'id',
 					'label' => '',
 					'rules' => ''
 				),
 				array(
-					'field'	=> 'tanggal_produksi',
-					'label' => 'tanggal_produksi',
+					'field'	=> 'id_produksi',
+					'label' => 'id_produksi',
 					'rules' => 'required'
 				)
 			);
@@ -85,7 +85,7 @@ class hasil_produksi extends CI_Controller {
 		}
 		else
 		{
-			$datapost = get_post_data(array('id_produksi','tanggal_produksi','hasil_total','jumlah_gagal','hasil_bersih'));
+			$datapost = get_post_data(array('id','id_produksi','tanggal_produksi','hasil_total','jumlah_gagal','hasil_bersih'));
 			$this->m_hasil_produksi->updateData($datapost);
 			$this->fungsi->run_js('load_silent("produksi/hasil_produksi","#content")');
 			$this->fungsi->message_box("Data Hasil Produksi sukses diperbarui...","success");

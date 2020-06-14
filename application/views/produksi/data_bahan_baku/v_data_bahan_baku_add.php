@@ -36,6 +36,24 @@
             </div>
         </div>
         <div class="form-group">
+            <label class="col-sm-4 control-label">Total Uang</label>
+            <div class="col-sm-8">
+            <?php echo form_input(array('name'=>'total_uang','class'=>'form-control'));?>
+            <?php echo form_error('total_uang');?>
+            <span id="check_data"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-4 control-label">Keterangan</label>
+            <div class="col-sm-8">
+          <select name ='keterangan'>
+          <option value ='Sudah Dibeli'>Sudah Dibeli</option>
+          <option value ='Belum Dibeli'>Belum Dibeli</option>
+          </select>
+          <span id="check_data"></span>
+            </div>
+        </div>
+        <div class="form-group">
             <label class="col-sm-4 control-label">Simpan</label>
             <div class="col-sm-8 tutup">
             <?php

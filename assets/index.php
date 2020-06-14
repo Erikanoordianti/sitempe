@@ -4,8 +4,8 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Sistem Laboratorium</title>
-    <link rel="shortcut icon" href="http://localhost/sitempe/assets/img/title.png" />
+    <title>Sistem Perusahaan Tempe</title>
+    <link rel="shortcut icon" href="http://localhost/sitempe/assets/img/rumahtempe4.png" />
     <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.5 -->
@@ -42,7 +42,7 @@
   <link rel="stylesheet" href="http://localhost/sitempe/assets/plugins/pace/pace.min.css">
   <link href="http://localhost/sitempe/assets/css/fileinput.min.css" media="all" rel="stylesheet" type="text/css" />
   </head>
-  <body class="hold-transition skin-purple-light sidebar-mini fixed">
+  <body class="hold-transition skin-red-light sidebar-mini fixed">
   <style type="text/css">
   .not-active {
    pointer-events: none;

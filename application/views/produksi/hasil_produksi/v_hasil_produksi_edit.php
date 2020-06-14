@@ -10,7 +10,7 @@
             <label class="col-sm-4 control-label">Id Produksi</label>
             <div class="col-sm-8">
             <?php echo form_hidden('id',$row->id); ?>
-            <?php echo form_input(array('name'=>'id_prosuksi','value'=>$row->id_produksi,'class'=>'form-control'));?>
+            <?php echo form_input(array('name'=>'id_produksi','value'=>$row->id_produksi,'class'=>'form-control'));?>
             <?php echo form_error('id_produksi');?>
             <span id="check_data"></span>
             </div>
@@ -19,7 +19,7 @@
         <div class="form-group">
             <label class="col-sm-4 control-label">Tanggal Produksi</label>
             <div class="col-sm-8">
-            <?php echo form_input(array('name'=>'tanggal_prosuksi','value'=>$row->tanggal_produksi,'class'=>'form-control'));?>
+            <?php echo form_input(array('name'=>'tanggal_produksi','type'=>'date','value'=>$row->tanggal_produksi,'class'=>'form-control'));?>
             <?php echo form_error('tanggal_produksi');?>
             <span id="check_data"></span>
             </div>
