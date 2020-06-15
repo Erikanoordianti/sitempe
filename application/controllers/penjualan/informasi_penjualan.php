@@ -97,4 +97,9 @@ class informasi_penjualan extends CI_Controller {
 		$this->m_informasi_penjualan->deleteData($id);
 		redirect('admin');
 	}
+
+	public function cetak(){
+		$data['informasi_penjualan'] = $this->m_informasi_penjualan->getData("informasi_penjualan")->result();
+		$this->load->view('application/views/cetak_informasi_penjualan.php', $data);
 	}
+}

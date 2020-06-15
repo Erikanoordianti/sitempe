@@ -60,17 +60,15 @@
               }
               ?>
               <a href="<?= site_url('penjualan/informasi_penjualan/delete/'.$row->id) ?>" class="btn btn-danger" onclick="return confirm('Anda yakin ingin menghapus informasi penjualan ?')"><i class="fa fa-trash"></i></a>
-
             </td>
           </tr>
           <?php endforeach;?>
         </tbody>
         </table>
-        <a href="" class="btn btn-warning" style="margin-bottom;
+           <a href="" class="btn btn-warning" style="margin-bottom;
         10px; "title="view/utily/v_dashboard.php"></i>Back</a>
-           <a href ="application/page/informasi_penjualan/cetak.php" class="btn btn-primary" style="margin-bottom;
-        10px; "title=""><i class="fa fa-print"></i>Cetak</a>
-        </div>
+        &emsp;
+        <a class="btn btn-danger" href=" <?php echo base_url().'application/views/cetak_informasi_penjualan.php'?>"><i class="fa fa-print"></i>cetak</a>
        </div>
       </div>
       </div>
