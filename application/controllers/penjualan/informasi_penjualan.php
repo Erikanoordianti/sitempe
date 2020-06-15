@@ -91,14 +91,18 @@ class informasi_penjualan extends CI_Controller {
 			$this->fungsi->message_box("Informasi Penjualan sukses diperbarui...","success");
 		}
 	}
-	public function delete()
+	public function delete($id) 
 	{
-		$id = $this->uri->segment(4);
+		$this->fungsi->check_previleges('informasi_penjualan');
+		if($id == '' || !is_numeric($id)) die;
 		$this->m_informasi_penjualan->deleteData($id);
-		redirect('admin');
+		$this->fungsi->run_js('load_silent("penjualan/informasi_penjualan","#content")');
+		$this->fungsi->message_box("Data Informasi Penjualan berhasil dihapus...","notice");
+		$this->fungsi->catat("Menghapus laporan dengan id ".$id);
 	}
 
-	public function cetak(){
+	public function cetak()
+	{
 		$data['informasi_penjualan'] = $this->m_informasi_penjualan->getData("informasi_penjualan")->result();
 		$this->load->view('application/views/cetak_informasi_penjualan.php', $data);
 	}
