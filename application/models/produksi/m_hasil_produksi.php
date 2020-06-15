@@ -7,7 +7,7 @@ class m_hasil_produksi extends CI_Model {
 	public function getData($value='')
 	{
 		$this->db->from('hasil_produksi mb');
-		$this->db->order_by('mb.id', 'desc');
+		$this->db->order_by('mb.id_produksi', 'desc');
 		return $this->db->get();
     }
     
@@ -23,13 +23,13 @@ class m_hasil_produksi extends CI_Model {
 
 	public function updateData($data='')
 	{
-		 $this->db->where('id',$data['id']);
+		 $this->db->where('id_produksi',$data['id_produksi']);
             $this->db->update('hasil_produksi',$data);
 	}
    //delete
 	public function deleteData($id='')
 	{
-		$this->db->where('id', $id);
+		$this->db->where('id_produksi', $id);
         $this->db->delete('hasil_produksi');
 	}
 

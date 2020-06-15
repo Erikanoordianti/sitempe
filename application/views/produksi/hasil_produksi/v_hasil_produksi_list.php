@@ -9,7 +9,7 @@
             <div class="box-tools pull-right">
             <?php
               $sesi = from_session('level');
-              if ($sesi == '1' || $sesi == '2' || $sesi == '3' || $sesi == '6') {
+              if ($sesi == '1' || $sesi == '4') {
                 echo button('load_silent("produksi/hasil_produksi/form/base","#modal")','Add New hasil produksi','btn btn-success');
               } else {
                 # code...
@@ -42,15 +42,22 @@
             <td align="center">
             <?php
               $sesi = from_session('level');
-              if ($sesi == '1' || $sesi == '2' || $sesi == '3' || $sesi == '6') {
-                echo button('load_silent("produksi/hasil_produksi/form/sub/'.$row->id.'","#modal")','','btn btn-info fa fa-edit','data-toggle="tooltip" title="Edit"');
+              if ($sesi == '1' || $sesi == '4') {
+                echo button('load_silent("produksi/hasil_produksi/form/sub/'.$row->id_produksi.'","#modal")','','btn btn-info fa fa-edit','data-toggle="tooltip" title="Edit"');
  
               } else {
                 # code...
               }
               ?>
-              <a href="<?= site_url('produksi/hasil_produksi/delete/'.$row->id) ?>" class="btn btn-danger" onclick="return confirm('Anda yakin ingin menghapus hasil produksi ?')"><i class="fa fa-trash"></i></a>
-
+             <?php 
+             $sesi = from_session('level');
+             if ($sesi == '1' || $sesi == '4') {
+             echo button('load_silent("produksi/hasil_produksi/delete/'.$row->id.'","#content")','','btn btn-danger fa fw fa-trash','data-toggle="tooltip" title="Hapus"');
+            } else {
+              # code...
+            }
+            ?>
+            }
             </td>
           </tr>
 
@@ -58,7 +65,7 @@
         </tbody>
         </table>
         <a href="" class="btn btn-warning" style="margin-bottom;
-        10px; "title="view/utily/v_dashboard.php"></i>Back</a>  </div>
+        10px; "title="back to home"></i>Back</a>  </div>
        </div>
       </div>
       </div>

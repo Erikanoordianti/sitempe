@@ -7,9 +7,9 @@
     <?php echo form_open('',array('name'=>'faddmenugrup','class'=>'form-horizontal','role'=>'form'));?>
         
         <div class="form-group">
-            <label class="col-sm-4 control-label">Id Produksi</label>
+            <label class="col-sm-4 control-label">id Produksi</label>
             <div class="col-sm-8">
-            <?php echo form_hidden('id',$row->id); ?>
+            <?php echo form_hidden('id_produksi',$row->id_produksi); ?>
             <?php echo form_input(array('name'=>'id_produksi','value'=>$row->id_produksi,'class'=>'form-control'));?>
             <?php echo form_error('id_produksi');?>
             <span id="check_data"></span>

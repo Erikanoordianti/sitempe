@@ -64,7 +64,7 @@ class hasil_produksi extends CI_Controller {
 		$this->load->library('form_validation');
 		$config = array(
 				array(
-					'field'	=> 'id',
+					'field'	=> 'id_produksi',
 					'label' => '',
 					'rules' => ''
 				),
@@ -79,23 +79,26 @@ class hasil_produksi extends CI_Controller {
 
 		if ($this->form_validation->run() == FALSE)
 		{
-			$data['edit'] = $this->db->get_where('hasil_produksi',array('id'=>$id));
+			$data['edit'] = $this->db->get_where('hasil_produksi',array('id_produksi'=>$id));
 			$data['status']='';
 			$this->load->view('produksi/hasil_produksi/v_hasil_produksi_edit',$data);
 		}
 		else
 		{
-			$datapost = get_post_data(array('id','id_produksi','tanggal_produksi','hasil_total','jumlah_gagal','hasil_bersih'));
+			$datapost = get_post_data(array('id_produksi','tanggal_produksi','hasil_total','jumlah_gagal','hasil_bersih'));
 			$this->m_hasil_produksi->updateData($datapost);
 			$this->fungsi->run_js('load_silent("produksi/hasil_produksi","#content")');
 			$this->fungsi->message_box("Data Hasil Produksi sukses diperbarui...","success");
 			$this->fungsi->catat($datapost,"Mengedit hasil_produksi dengan data sbb:",true);
 		}
 	}
-	public function delete()
+	public function delete($id) 
 	{
-		$id = $this->uri->segment(4);
-		$this->m_hasil_produksi->deleteData($id);
-		redirect('admin');
+		$this->fungsi->check_previleges('hasil_produksi');
+		if($id == '' || !is_numeric($id)) die;
+		$this->m_kelola_penggantian->deleteData($id);
+		$this->fungsi->run_js('load_silent("produksi/hasil_produksi","#content")');
+		$this->fungsi->message_box("Data hasil produksi berhasil dihapus...","notice");
+		$this->fungsi->catat("Menghapus laporan dengan id_produksi ".$id);
 	}
 	}
