@@ -95,11 +95,14 @@ class data_bahan_baku extends CI_Controller {
 			$this->fungsi->catat($datapost,"Mengedit Data Bahan Baku dengan data sbb:",true);
 		}
 	}
-		public function delete()
+	public function delete($id) 
 	{
-		$id = $this->uri->segment(4);
+		$this->fungsi->check_previleges('data_bahan_baku');
+		if($id == '' || !is_numeric($id)) die;
 		$this->m_data_bahan_baku->deleteData($id);
-		redirect('admin');
+		$this->fungsi->run_js('load_silent("produksi/data_bahan_baku","#content")');
+		$this->fungsi->message_box("Data Data Bahan Baku berhasil dihapus...","notice");
+		$this->fungsi->catat("Menghapus laporan dengan id ".$id);
 	}
 }
 /* End of file data_bahan_baku.php */

@@ -96,7 +96,7 @@ class hasil_produksi extends CI_Controller {
 	{
 		$this->fungsi->check_previleges('hasil_produksi');
 		if($id == '' || !is_numeric($id)) die;
-		$this->m_kelola_penggantian->deleteData($id);
+		$this->m_hasil_produksi->deleteData($id);
 		$this->fungsi->run_js('load_silent("produksi/hasil_produksi","#content")');
 		$this->fungsi->message_box("Data hasil produksi berhasil dihapus...","notice");
 		$this->fungsi->catat("Menghapus laporan dengan id_produksi ".$id);

@@ -16,7 +16,7 @@
             <div class="box-tools pull-right">
             <?php
               $sesi = from_session('level');
-              if ($sesi == '1' || $sesi == '2' || $sesi == '3' || $sesi == '6') {
+              if ($sesi == '1' || $sesi == '4') {
                 echo button('load_silent("produksi/data_bahan_baku/form/base","#modal")','Add New Data Bahan Baku','btn btn-success');
               } else {
                 # code...
@@ -52,13 +52,20 @@
             <td align="center">
             <?php
               $sesi = from_session('level');
-              if ($sesi == '1' || $sesi == '2' || $sesi == '3' || $sesi == '6') {
+              if ($sesi == '1' || $sesi == '4') {
                 echo button('load_silent("produksi/data_bahan_baku/form/sub/'.$row->id.'","#modal")','','btn btn-info fa fa-edit','data-toggle="tooltip" title="Edit"');
               } else {
                 # code...
               }
               ?>
-              <a href="<?= site_url('produksi/data_bahan_baku/delete/'.$row->id) ?>" class="btn btn-danger" onclick="return confirm('Anda yakin ingin menghapus data bahan baku?')"><i class="fa fa-trash"></i></a>
+              <?php 
+             $sesi = from_session('level');
+             if ($sesi == '1' || $sesi == '4') {
+             echo button('load_silent("produksi/data_bahan_baku/delete/'.$row->id.'","#content")','','btn btn-danger fa fw fa-trash','data-toggle="tooltip" title="Hapus"');
+            } else {
+              # code...
+            }
+            ?>
             </td>
           </tr>
           <?php endforeach;?>
