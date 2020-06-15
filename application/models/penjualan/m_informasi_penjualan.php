@@ -8,7 +8,7 @@ class m_informasi_penjualan extends CI_Model {
 	{
 		$this->db->from('informasi_penjualan ma');
 		$this->db->order_by('ma.id', 'desc');
-		return $this->db->get('informasi_penjualan');
+		return $this->db->get('');
     }
     
     //insert->create

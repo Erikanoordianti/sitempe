@@ -65,7 +65,7 @@ class informasi_penjualan extends CI_Controller {
 		$config = array(
 				array(
 					'field'	=> 'id',
-					'label' => '',
+					'label' => 'id',
 					'rules' => ''
 				),
 				array(
@@ -88,7 +88,8 @@ class informasi_penjualan extends CI_Controller {
 			$datapost = get_post_data(array('id','id_penjualan','tanggal_pembelian','no_nota','nama_konsumen','kualitas','ukuran','harga','jumlah_beli','total_bayar','status'));
 			$this->m_informasi_penjualan->updateData($datapost);
 			$this->fungsi->run_js('load_silent("penjualan/informasi_penjualan","#content")');
-			$this->fungsi->message_box("Informasi Penjualan sukses diperbarui...","success");
+			$this->fungsi->message_box("Data Informasi Penjualan sukses diperbarui...","success");
+			$this->fungsi->catat($datapost,"Mengedit informasi_penjualan dengan data sbb:",true);
 		}
 	}
 	public function delete()
