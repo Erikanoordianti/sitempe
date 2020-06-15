@@ -76,7 +76,7 @@ class Auth {
                 'nama'              => $query->row()->nama,
                 'level'             => $query->row()->level,
                 'jenis_kelamin'    => $query->row()->jenis_kelamin,
-                'status'            => $query->row()->status,
+                //'status'            => $query->row()->status,
                 'gambar'            => $query->row()->gambar,
                 'nama_level'        => $query->row()->nama_level,
                 'logged_in'         => TRUE,
