@@ -52,12 +52,11 @@
              <?php 
              $sesi = from_session('level');
              if ($sesi == '1' || $sesi == '4') {
-             echo button('load_silent("produksi/hasil_produksi/delete/'.$row->id.'","#content")','','btn btn-danger fa fw fa-trash','data-toggle="tooltip" title="Hapus"');
+             echo button('load_silent("produksi/hasil_produksi/delete/'.$row->id_produksi.'","#content")','','btn btn-danger fa fw fa-trash','data-toggle="tooltip" title="Hapus"');
             } else {
               # code...
             }
             ?>
-            }
             </td>
           </tr>
 
